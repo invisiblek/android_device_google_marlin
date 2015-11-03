@@ -464,6 +464,11 @@ static void power_hint(struct power_module *module, power_hint_t hint,
     }
 }
 
+int __attribute__ ((weak)) get_number_of_profiles()
+{
+    return 0;
+}
+
 int __attribute__ ((weak)) set_interactive_override(struct power_module *module, int on)
 {
     return HINT_NONE;
@@ -832,6 +837,14 @@ static struct hw_module_methods_t power_module_methods = {
     .open = power_open,
 };
 
+int get_feature(struct power_module *module __unused, feature_t feature)
+{
+    if (feature == POWER_FEATURE_SUPPORTED_PROFILES) {
+        return get_number_of_profiles();
+    }
+    return -1;
+}
+
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
         .tag = HARDWARE_MODULE_TAG,
@@ -848,5 +861,6 @@ struct power_module HAL_MODULE_INFO_SYM = {
     .setInteractive = set_interactive,
     .get_number_of_platform_modes = get_number_of_platform_modes,
     .get_platform_low_power_stats = get_platform_low_power_stats,
-    .get_voter_list = get_voter_list
+    .get_voter_list = get_voter_list,
+    .getFeature = get_feature
 };
