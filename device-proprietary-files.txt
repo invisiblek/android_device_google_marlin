@@ -1,0 +1,36 @@
+# CNE
+etc/cne/Nexus/ATT/ATT_profiles.xml
+etc/cne/Nexus/ROW/ROW_profiles.xml
+etc/cne/Nexus/VZW/VZW_profiles.xml
+
+# Display
+lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
+
+# Hotword Enrollment for WCD9335
+-priv-app/HotwordEnrollmentWCD9335/HotwordEnrollmentWCD9335.apk:priv-app/HotwordEnrollmentWCD9335/HotwordEnrollmentWCD9335.apk:PRESIGNED
+
+# IMS/HD Voice
+-priv-app/CNEService/CNEService.apk
+-app/ims/ims.apk
+-app/imssettings/imssettings.apk
+
+# Sprint
+-priv-app/SprintDM/SprintDM.apk
+-priv-app/SprintHM/SprintHM.apk
+
+# Time Services
+-vendor/lib/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
+
+# VZW
+-app/VZWAPNLib/VZWAPNLib.apk:app/VZWAPNLib/VZWAPNLib.apk:PRESIGNED
+etc/permissions/com.verizon.apn.xml
+etc/permissions/com.verizon.embms.xml
+etc/permissions/com.verizon.provider.xml
+etc/permissions/qti-vzw-ims-internal.xml
+etc/permissions/vzw_sso_permissions.xml
+-framework/VerizonUnifiedSettings.jar:PRESIGNED
+-priv-app/VZWAPNService/VZWAPNService.apk:priv-app/VZWAPNService/VZWAPNService.apk:PRESIGNED
+-priv-app/VZWAVS/VZWAVS.apk:priv-app/VZWAVS/VZWAVS.apk:PRESIGNED
+-priv-app/VzwLcSilent/VzwLcSilent.apk:priv-app/VzwLcSilent/VzwLcSilent.apk:PRESIGNED
+-priv-app/VzwOmaTrigger/VzwOmaTrigger.apk:priv-app/VzwOmaTrigger/VzwOmaTrigger.apk:PRESIGNED
