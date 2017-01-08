@@ -3,6 +3,9 @@
 # Product-specific compile-time definitions
 #
 
+# Allow Lineage config to override others
+-include device/google/marlin/sailfish/BoardConfigLineage.mk
+
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOOTLOADER_BOARD_NAME := sailfish
 TARGET_BOARD_INFO_FILE := device/google/marlin/sailfish/board-info.txt
@@ -205,5 +208,3 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 DEVICE_MANIFEST_FILE := device/google/marlin/manifest.xml
 DEVICE_MATRIX_FILE   := device/google/marlin/compatibility_matrix.xml
-
--include device/google/marlin/sailfish/BoardConfigLineage.mk
