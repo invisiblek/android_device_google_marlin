@@ -8,6 +8,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Gello
 PRODUCT_PACKAGES += Gello
 
+# Google assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+
 # IMS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
