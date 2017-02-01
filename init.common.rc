@@ -605,10 +605,10 @@ service netmgrd /system/bin/netmgrd
     user root
     group root wifi wakelock radio inet
 
-service qti /vendor/bin/qti
-    class main
-    user radio
-    group radio diag usb
+#service qti /vendor/bin/qti
+#    class main
+#    user radio
+#    group radio diag usb
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
