@@ -28,4 +28,9 @@ TARGET_USE_SDCLANG := true
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# TWRP Support - Optional
+ifeq ($(WITH_TWRP),true)
+-include device/google/marlin/twrp.mk
+endif
+
 -include vendor/google/marlin/BoardConfigVendor.mk
