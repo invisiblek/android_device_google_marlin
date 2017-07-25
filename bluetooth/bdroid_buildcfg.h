@@ -32,4 +32,7 @@
 // QCOM power management workaround
 #define BT_CLEAN_TURN_ON_DISABLED TRUE
 
+#define BTA_AV_SINK_INCLUDED FALSE
+#define BTIF_A2DP_SRC_BIT_DEPTH 16
+
 #endif
